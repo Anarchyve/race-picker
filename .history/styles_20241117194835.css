@@ -1,0 +1,88 @@
+/* 전체적인 Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 상단 정렬로 수정 */
+    min-height: 100vh; /* 최소 높이 설정 */
+    overflow: auto; /* 스크롤 활성화 */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 20px; /* 화면 상단과의 여백 추가 */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#race-track {
+    position: relative;
+    width: 100%;
+    background-color: #eaeaea;
+    border: 1px solid #333;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.runner {
+    background-color: #333; /* 기본 둥근 점 색상 */
+    border-radius: 50%; /* 원형으로 설정 */
+    width: 30px; /* 둥근 점 크기 */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* 이름 표시용 텍스트 크기 */
+    color: white; /* 텍스트 색상 */
+    font-weight: bold; /* 텍스트 강조 */
+    text-align: center;
+}
+
+
+#result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #444;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Random Number Generator 🎲</h1>
+    <p>Enter the range for your random number:</p>
+    <input id="min-value" type="number" placeholder="Enter minimum value">
+    <input id="max-value" type="number" placeholder="Enter maximum value">
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    <div id="result"></div>
+
+    <audio id="click-sound" src="click.mp3"></audio>
+    <audio id="success-sound" src="drumroll.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

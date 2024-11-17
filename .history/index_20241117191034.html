@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple URL Shortener</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: auto; padding: 20px; }
+        input, button { padding: 10px; margin: 10px 0; width: 100%; }
+        #short-url { color: blue; text-decoration: underline; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <input id="long-url" type="text" placeholder="Enter long URL here">
+    <button onclick="generateShortURL()">Generate Short URL</button>
+    <p id="short-url"></p>
+
+    <script>
+        function generateShortURL() {
+            const longUrl = document.getElementById('long-url').value;
+            if (!longUrl) {
+                alert("Please enter a valid URL");
+                return;
+            }
+
+            // Simple hash-based shortener (for demo purposes)
+            const shortCode = btoa(longUrl).slice(0, 8); // Base64 encode and take the first 8 characters
+            const shortUrl = `${window.location.origin}/#${shortCode}`;
+            
+            const shortUrlElement = document.getElementById('short-url');
+            shortUrlElement.textContent = shortUrl;
+            shortUrlElement.onclick = () => navigator.clipboard.writeText(shortUrl);
+            alert("Short URL copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
